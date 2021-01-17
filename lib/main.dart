@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Login UI',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        // resizeToAvoidBottomInset: false,
         body: Container(
           child: LoginPage(),
         ),

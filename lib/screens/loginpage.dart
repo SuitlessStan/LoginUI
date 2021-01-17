@@ -50,8 +50,10 @@ class _LoginPageState extends State<LoginPage> {
         _backgroundColor = Colors.white;
         _headingColor = Color(0xFFB3F294B);
         _loginYOffset = ScreenHeight;
+
         _registerYOffset = ScreenHeight;
         _loginXOffset = 0;
+        _loginHeight = _keyboardVisible ? ScreenHeight : ScreenHeight - 230;
         _loginWidth = ScreenWidth;
         _loginOpacity = 1;
         _marginTop = 60;
@@ -60,7 +62,8 @@ class _LoginPageState extends State<LoginPage> {
       case 1:
         _backgroundColor = Color(0xFFBD34C59);
         _headingColor = Colors.white;
-        _loginYOffset = _keyboardVisible ? 20 : 230;
+        _loginYOffset = _keyboardVisible ? 30 : 230;
+        _loginHeight = _keyboardVisible ? ScreenHeight : ScreenHeight - 230;
         _registerYOffset = ScreenHeight;
         _loginXOffset = 0;
         _loginWidth = ScreenWidth;
@@ -71,11 +74,12 @@ class _LoginPageState extends State<LoginPage> {
       case 2:
         _backgroundColor = Color(0xFFBD34C59);
         _headingColor = Colors.white;
-        _loginYOffset = 210;
-        _registerYOffset = _keyboardVisible ? 20 : 230;
+        _loginYOffset = _keyboardVisible ? 25 : 180;
+        _registerYOffset = _keyboardVisible ? 100 : 230;
+        _loginHeight = _keyboardVisible ? ScreenHeight : ScreenHeight - 220;
         _loginXOffset = 20;
         _loginWidth = ScreenWidth - 40;
-        _loginOpacity = 0.6;
+        _loginOpacity = 0.5;
         _marginTop = 40;
         break;
     }
